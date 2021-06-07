@@ -1,13 +1,17 @@
+import styles from "./Footer.modul.scss";
+
 const Footer = ({
   first,
   second,
   message,
   user: { name, state, questions },
   children,
+  color,
+  border,
 }) => {
   return (
-    <footer>
-      <p>lorem ipsum</p>
+    <footer className={styles.Footer}>
+      <h2 className={styles.Footer__Title}>lorem ipsum</h2>
       <p>
         If I add {first} to {second} I should get number
         <span> - </span>
@@ -29,5 +33,4 @@ const Footer = ({
 Footer.defaultProps = {
   first: 10,
 };
-
 export default Footer;
