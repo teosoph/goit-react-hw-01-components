@@ -1,6 +1,7 @@
 body {
-  background-color: #e7ecf2;
+  background-color: #abcdf7;
   text-align: center;
+  font-family: Roboto;
 }
 ul,
 p,
@@ -13,9 +14,9 @@ h6 {
   margin: 0;
   padding: 0;
 }
-li {
-  list-style: none;
-}
 a {
   text-decoration: none;
+}
+li {
+  list-style: none;
 }

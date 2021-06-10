@@ -1,49 +1,53 @@
 .profile {
+  width: 240px;
+
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
-  overflow: hidden;
-  border-radius: 5px;
-  border: 1px solid #cbd3dc;
-  box-shadow: 0 0 5px 5px #cbd3dc;
+  margin-top: 50px;
   margin-bottom: 50px;
+
+  box-shadow: 0 0 10px 10px #83afe1;
 }
 .description {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  justify-content: center;
 
-  background-color: #ffffff;
+  padding: 30px 0 30px 0;
+
+  background-color: #f5f3f3;
 }
 .avatar {
   width: 100px;
   height: 100px;
-  margin-bottom: 25px;
+
+  margin-bottom: 30px;
   border-radius: 50%;
 }
+
 .name {
   font-weight: 500;
   margin-bottom: 8px;
   font-size: 20px;
 }
+
 .tag {
   margin-bottom: 8px;
   font-size: 14px;
   color: #81909e;
 }
+
 .location {
   font-size: 14px;
   color: #81909e;
 }
+
 .stats {
   display: flex;
   justify-content: center;
   height: 75px;
   background-color: #f3f6f9;
-  /* border: 1px solid #cbd3dc; */
   border-top: 1px solid #cbd3dc;
 }
 .item {
@@ -52,19 +56,20 @@
   align-items: center;
   justify-content: center;
   flex-basis: calc(100% / 3);
-  /* border: 1px solid #cbd3dc; */
 }
 
 .item:nth-child(even) {
   border-left: 1px solid #cbd3dc;
   border-right: 1px solid #cbd3dc;
 }
+
 .label {
   margin-bottom: 5px;
   text-transform: capitalize;
   font-size: 12px;
   color: #81909e;
 }
+
 .quantity {
   font-weight: 500;
   font-size: 14px;
