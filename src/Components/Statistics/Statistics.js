@@ -1,55 +1,54 @@
 import PropTypes from "prop-types";
 import styles from "./Statistics.module.css";
 
+function colorGen() {
+  const [r, g, b] = [1, 2, 3].map(() => {
+    return Math.floor(Math.random() * 256);
+  });
+  return `rgb(${r},${g},${b})`;
+}
+
 const Statistics = ({ title, stats }) => {
   return (
     <section className={styles.statistics}>
-      <h2 class="title">Upload stats</h2>
+      {title && (
+        <h2 className={styles.title} style={{ color: colorGen() }}>
+          {title}
+        </h2>
+      )}
 
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">{title.docx}</span>
-          <span class="percentage">{stats}4%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp3</span>
-          <span class="percentage">14%</span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage">41%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage">12%</span>
-        </li>
+      <ul className={styles.list}>
+        {stats.map((item) => {
+          return (
+            <li
+              className={styles.item}
+              key={item.id}
+              style={{ backgroundColor: colorGen() }}
+            >
+              <span className={styles.label}>{item.label}</span>
+
+              <span className={styles.percentage}>{item.percentage}%</span>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
 };
 
-// Statistics.defaultProps = {
-//   avatar:
-//     "https://u7.uidownload.com/vector/370/347/vector-pianobrad-avatar-svg.jpg",
-//   tag: "empty",
-//   location: "empty",
-//   stats: {
-//     followers: 0,
-//     views: 0,
-//     likes: 0,
-//   },
-// };
+Statistics.defaultProps = {
+  stats: [],
+};
 
-// Statistics.propTypes = {
-//   avatar: PropTypes.string,
-//   alt: PropTypes.string.isRequired,
-//   tag: PropTypes.string.isRequired,
-//   location: PropTypes.string.isRequired,
-//   stats: PropTypes.shape({
-//     followers: PropTypes.number.isRequired,
-//     views: PropTypes.number.isRequired,
-//     likes: PropTypes.number.isRequired,
-//   }).isRequired,
-// };
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 export default Statistics;
