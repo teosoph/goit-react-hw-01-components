@@ -7,7 +7,10 @@ import statisticalData from "./Components/Statistics/statistical-data.json";
 const App = () => {
   return (
     <div>
-      <h1> PROFILE {user.name}</h1>
+      <h1 style={{ color: "white", textShadow: "1px 1px 2px rgb(0, 0, 0)" }}>
+        PROFILE {user.name}
+      </h1>
+
       <Profile
         name={user.name}
         tag={user.tag}
