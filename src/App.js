@@ -4,7 +4,7 @@ import user from "./Components/Profile/user.json";
 import Statistics from "./Components/Statistics/Statistics";
 import statisticalData from "./Components/Statistics/statistical-data.json";
 
-import FriendList from "./Components/FriendList/Friends";
+import FriendList from "./Components/FriendList/FriendsList";
 import friends from "./Components/FriendList/friends.json";
 
 const App = () => {

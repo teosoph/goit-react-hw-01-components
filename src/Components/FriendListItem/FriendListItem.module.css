@@ -1,0 +1,43 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 40px;
+
+  width: 300px;
+  height: 150px;
+
+  background-color: #ffffff;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0),
+    0 0 0.2em rgb(0, 0, 0);
+  box-shadow: 0 0 10px 10px #83afe1;
+}
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+.name {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.online {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: green;
+}
+.offline {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: red;
+}
