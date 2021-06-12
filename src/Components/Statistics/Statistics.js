@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import styles from "./Statistics.module.css";
 
 function colorGen() {
-  const [r, g, b] = [1, 2, 3].map(() => {
+  const [r, g, b] = [1, 1, 1].map(() => {
     return Math.floor(Math.random() * 256);
   });
   return `rgb(${r},${g},${b})`;
@@ -37,7 +37,7 @@ Statistics.defaultProps = {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

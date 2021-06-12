@@ -43,7 +43,7 @@ Profile.defaultProps = {
 
 Profile.propTypes = {
   avatar: PropTypes.string,
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   stats: PropTypes.shape({
